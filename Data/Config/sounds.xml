@@ -7798,7 +7798,7 @@
 		<MaxVoices name="5"/>
 		<MaxEntities name="30"/>
 		<MaxRepeatRate name="0.001"/>
-	</SoundDataNode>	
+	</SoundDataNode>
 	<SoundDataNode name="mg_reload">
 		<AudioSource name="Sounds/AudioSource_Interact"/>
 		<AudioClip ClipName="#sfx?MG_reload"/>
@@ -7815,7 +7815,7 @@
 		<Noise range="50" prio="1" time="1" heat_map_strength="0.3" heat_map_time="120"/>
 		<Sequence />
 		<AudioClip ClipName="#sfx?MG_single"/>
-		<AudioClip ClipName="#sfx?MG_single"  />
+		<AudioClip ClipName="#sfx?MG_single"/>
 		<AudioClip ClipName="Sounds/Weapons/Ranged/AK47/ak47_fire_end"/>
 		<LocalCrouchVolumeScale name="1"/>
 		<CrouchNoiseScale name="1"/>
@@ -7823,7 +7823,7 @@
 		<MaxVoices name="5"/>
 		<MaxEntities name="30"/>
 		<MaxRepeatRate name="0.001"/>
-	</SoundDataNode>	
+	</SoundDataNode>
 	<SoundDataNode name="vSSVintorezShoot">
 		<AudioSource name="Sounds/AudioSource_WeaponFire"/>
 		<NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
@@ -7858,7 +7858,7 @@
 		<MaxEntities name="30"/>
 		<MaxRepeatRate name="0.01"/>
 	</SoundDataNode>
-		<SoundDataNode name="coltPythonShoot">
+	<SoundDataNode name="coltPythonShoot">
 		<AudioSource name="Sounds/AudioSource_WeaponFire"/>
 		<NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
 		<Noise range="15" prio="1" time="1" heat_map_strength="0.3" heat_map_time="120"/>
@@ -7870,10 +7870,9 @@
 		<MaxEntities name="30"/>
 		<MaxRepeatRate name="0.001"/>
 	</SoundDataNode>
-		<SoundDataNode name="babyalert">
+	<SoundDataNode name="babyalert">
 		<AudioSource name="Sounds/AudioSource_Pain"/>
 		<AudioClip ClipName="#babyzombieaudio?rosie"/>
-
 		<Channel name="Mouth"/>
 		<Priority name="0"/>
 		<LocalCrouchVolumeScale name="1.0"/>
@@ -7882,7 +7881,7 @@
 		<MaxVoices name="10"/>
 		<MaxRepeatRate name="1.111"/>
 	</SoundDataNode>
-		<SoundDataNode name="babyattack">
+	<SoundDataNode name="babyattack">
 		<AudioSource name="Sounds/AudioSource_Pain"/>
 		<AudioClip ClipName="#babyzombieaudio?child_zombie_attack_1"/>
 		<AudioClip ClipName="#babyzombieaudio?child_zombie_attack_2"/>
@@ -7902,10 +7901,9 @@
 		<MaxVoices name="10"/>
 		<MaxRepeatRate name="1.111"/>
 	</SoundDataNode>
-		<SoundDataNode name="babyroam">
+	<SoundDataNode name="babyroam">
 		<AudioSource name="Sounds/AudioSource_Pain"/>
 		<AudioClip ClipName="#babyzombieaudio?rosie"/>
-
 		<Channel name="Mouth"/>
 		<Priority name="0"/>
 		<LocalCrouchVolumeScale name="1.0"/>
@@ -7914,7 +7912,7 @@
 		<MaxVoices name="10"/>
 		<MaxRepeatRate name="1.111"/>
 	</SoundDataNode>
-		<SoundDataNode name="babypain">
+	<SoundDataNode name="babypain">
 		<AudioSource name="Sounds/AudioSource_Pain"/>
 		<AudioClip ClipName="#babyzombieaudio?child_zombie_hurt_1"/>
 		<AudioClip ClipName="#babyzombieaudio?child_zombie_hurt_2"/>
@@ -7930,8 +7928,8 @@
 		<NoiseScale name="1"/>
 		<MaxVoices name="10"/>
 		<MaxRepeatRate name="1.111"/>
-	</SoundDataNode>	
-		<SoundDataNode name="babydeath">
+	</SoundDataNode>
+	<SoundDataNode name="babydeath">
 		<AudioSource name="Sounds/AudioSource_Pain"/>
 		<AudioClip ClipName="#babyzombieaudio?child_zombie_hurt_8"/>
 		<AudioClip ClipName="#babyzombieaudio?child_zombie_hurt_9"/>
@@ -7944,7 +7942,7 @@
 		<MaxVoices name="10"/>
 		<MaxRepeatRate name="1.111"/>
 	</SoundDataNode>
-		<SoundDataNode name="babysense">
+	<SoundDataNode name="babysense">
 		<AudioSource name="Sounds/AudioSource_Pain"/>
 		<AudioClip ClipName="#babyzombieaudio?child_zombie_growl_1"/>
 		<AudioClip ClipName="#babyzombieaudio?child_zombie_growl_2"/>
@@ -8222,5 +8220,101 @@
 		<NoiseScale name="1"/>
 		<MaxVoices name="10"/>
 		<MaxRepeatRate name="1.111"/>
+	</SoundDataNode>
+	<SoundDataNode name="newzombiegrowl">
+		<AudioSource name="Sounds/AudioSource_Pain" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Growl_01" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Growl_02" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Growl_03" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Growl_04" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Growl_05" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Growl_06" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Growl_07" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Growl_08" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Growl_09" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Growl_10" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Growl_11" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Growl_12" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Growl_13" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Growl_14" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Growl_15" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Growl_16" />
+		<Channel name="Mouth" />
+		<Priority name="4" />
+		<LocalCrouchVolumeScale name="1.0" />
+		<CrouchNoiseScale name="0.5" />
+		<NoiseScale name="1" />
+		<MaxVoices name="10" />
+		<MaxRepeatRate name="3" />
+	</SoundDataNode>
+	<SoundDataNode name="newzombiebreath">
+		<AudioSource name="Sounds/AudioSource_Pain" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Breath_01" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Breath_02" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Breath_03" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Breath_04" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Breath_05" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Breath_06" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Breath_07" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Breath_08" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Breath_09" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Breath_10" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Breath_11" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Breath_12" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Breath_13" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Breath_14" />
+		<Channel name="Mouth" />
+		<Priority name="4" />
+		<LocalCrouchVolumeScale name="1.0" />
+		<CrouchNoiseScale name="0.5" />
+		<NoiseScale name="1" />
+		<MaxVoices name="10" />
+		<MaxRepeatRate name="3" />
+	</SoundDataNode>
+	<SoundDataNode name="newzombieslurp">
+		<AudioSource name="Sounds/AudioSource_Pain" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Teeth_Slurp_07" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Teeth_Slurp_08" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Teeth_Slurp_09" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Teeth_Slurp_10" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Teeth_Slurp_11" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Teeth_Slurp_12" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Teeth_Slurp_13" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Teeth_Slurp_14" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Teeth_Slurp_15" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Teeth_Slurp_16" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Teeth_Slurp_17" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Teeth_Slurp_18" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Teeth_Slurp_19" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Teeth_Slurp_20" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Teeth_Slurp_21" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Teeth_Slurp_22" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Teeth_Slurp_23" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Teeth_Slurp_24" />
+		<AudioClip ClipName="#SoundsZombieGrowls?ZomB_Teeth_Slurp_25" />
+		<Channel name="Mouth" />
+		<Priority name="4" />
+		<LocalCrouchVolumeScale name="1.0" />
+		<CrouchNoiseScale name="0.5" />
+		<NoiseScale name="1" />
+		<MaxVoices name="10" />
+		<MaxRepeatRate name="3" />
+	</SoundDataNode>
+	<SoundDataNode name="newzombiesteps">
+		<AudioSource name="Sounds/AudioSource_Footsteps" />
+		<AudioClip ClipName="#SoundsZombieTeeth?ZomB_Teeth_01" />
+		<AudioClip ClipName="#SoundsZombieTeeth?ZomB_Teeth_02" />
+		<AudioClip ClipName="#SoundsZombieTeeth?ZomB_Teeth_03" />
+		<AudioClip ClipName="#SoundsZombieTeeth?ZomB_Teeth_04" />
+		<AudioClip ClipName="#SoundsZombieTeeth?ZomB_Teeth_05" />
+		<AudioClip ClipName="#SoundsZombieTeeth?ZomB_Teeth_06" />
+		<Channel name="Mouth" />
+		<Priority name="4" />
+		<LocalCrouchVolumeScale name="1.0" />
+		<CrouchNoiseScale name="0.5" />
+		<NoiseScale name="1" />
+		<MaxVoices name="2" />
+		<MaxRepeatRate name="0.01" />
+		<runningvolumescale name="2" />
 	</SoundDataNode>
 </Sounds>

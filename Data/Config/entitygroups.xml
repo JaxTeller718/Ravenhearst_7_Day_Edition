@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <entitygroups>
-
 	<entitygroup name="NightTerrors">
 		<entity name="zombieOldTimer" prob="0.3"/>
 		<entity name="zombieBiker" prob="0.3"/>
@@ -17,7 +16,6 @@
 		<entity name="bagBones" prob="0.05"/>
 		<entity name="fleshTonn" prob="0.02"/>
 	</entitygroup>
-	
 	<entitygroup name="NightTerrorsExtreme">
 		<entity name="zombieOldTimer" prob="0.3"/>
 		<entity name="zombieBiker" prob="0.3"/>
@@ -32,9 +30,7 @@
 		<entity name="Nightmare_c5" prob="0.15"/>
 		<entity name="Ripper" prob="0.05"/>
 		<entity name="ZombieMutant" prob="0.15"/>
-
 	</entitygroup>
-
 	<entitygroup name="BanditsAll">
 		<entity name="followerSargentSlaughter01"/>
 		<entity name="followerSargentSlaughter02"/>
@@ -109,7 +105,6 @@
 		<entity name="followerBittercup03"/>
 		<entity name="followerBittercup04"/>
 	</entitygroup>
-	
 	<entitygroup name="ZombiesExtra">
 		<entity name="sanZombieTrailerPark"/>
 		<entity name="sanZombieCannibalFemale"/>
@@ -288,7 +283,6 @@
 		<entity name="zombieDitz" prob="0.03"/>
 		<entity name="CuriousGeorge" prob="0.01"/>
 		<entity name="zombieFatHawaiian" prob="0.3"/>
-
 	</entitygroup>
 	<entitygroup name="ZombiesWasteland">
 		<entity name="zombieSpider"/>
@@ -312,9 +306,7 @@
 		<entity name="CuriousGeorge" prob="0.01"/>
 		<entity name="zombieFatHawaiian"/>
 		<entity name="zombieFemaleFat"/>
-
 	</entitygroup>
-	
 	<entitygroup name="ZombiesWastelandwithBandits">
 		<!--	Bears/Animals aren't controllable by the BloodMoon horde system  until Joe	refactors all the Animal code.	-->
 		<entity name="zombieSpider"/>
@@ -334,7 +326,7 @@
 		<entity name="zombieWightFeral"  prob="0.05"/>
 		<entity name="zombieFatHawaiian"/>
 		<entity name="zombieFemaleFat"/>
-		<entity name="followerSargentSlaughter01"  prob="0.1"/>
+<!-- 		<entity name="followerSargentSlaughter01"  prob="0.1"/>
 		<entity name="followerSargentSlaughter02"  prob="0.1"/>
 		<entity name="followerSargentSlaughter03"  prob="0.1"/>
 		<entity name="followerSargentSlaughter04"  prob="0.1"/>
@@ -405,11 +397,8 @@
 		<entity name="followerBittercup01"  prob="0.1"/>
 		<entity name="followerBittercup02"  prob="0.1"/>
 		<entity name="followerBittercup03"  prob="0.1"/>
-		<entity name="followerBittercup04"  prob="0.1"/>
-
+		<entity name="followerBittercup04"  prob="0.1"/> -->
 	</entitygroup>
-	
-	
 	<entitygroup name="ZombiesWastelandNight">
 		<entity name="zombieSpiderFeral"/>
 		<entity name="zombieBoeFeral"/>
@@ -473,7 +462,6 @@
 		<entity name="zombieScared" prob="0.05"/>
 		<entity name="zombieDitz" prob="0.03"/>
 		<entity name="CuriousGeorge" prob="0.01"/>
-
 	</entitygroup>
 	<entitygroup name="ZombiesWastelandNightNoBears">
 		<!--	Bears/Animals aren't controllable by the BloodMoon horde system  until Joe	refactors all the Animal code.	-->
@@ -494,11 +482,6 @@
 		<entity name="zombieBurnt"/>
 		<entity name="zombieWightFeral"/>
 		<entity name="zombieMaleHazmat" prob="0.1"/>
-		<entity name="zombieMaleHazmat6" prob="0.1"/>
-		<entity name="zombieSoldier5" prob="0.1"/>
-		<entity name="zombieSoldier6" prob="0.1"/>
-		<entity name="zombieMaleHazmat3"  prob="0.1"/>
-		<entity name="zombieMaleHazmat1" prob="0.1"/>
 		<entity name="zombieFatHawaiian"/>
 		<entity name="zombieFemaleFat"/>
 		<entity name="sanZombieTrailerPark"  prob="0.3"/>
@@ -736,9 +719,11 @@
 		<entity name="valZombieBrute" prob="0.03"/>
 	</entitygroup>
 	<entitygroup name="ZombieScouts">
-		<entity name="Samara"  />
+		<entity name="Samara"/>
 		<entity name="zombieScreamer5"/>
 		<entity name="zombieScreamer"/>
+		<entity name="zombieScreamer7"/>
+		<entity name="zombieScreamer6"/>
 	</entitygroup>
 	<entitygroup name="ZombiesCrawlers">
 		<entity name="zombieSteveCrawler" prob="1"/>
@@ -769,7 +754,6 @@
 		<entity name="zombieSnow3"/>
 		<entity name="zombieSnow5"/>
 		<entity name="zombieSnow6"/>
-		<entity name="zombieSnow7"/>
 	</entitygroup>
 	<entitygroup name="ZombiesBoss">
 		<entity name="zombieFatCop"/>
@@ -868,7 +852,7 @@
 		<entity name="animalBoar"/>
 		<entity name="animalStag"/>
 	</entitygroup>
-	<entitygroup name="AnimalsAll" >
+	<entitygroup name="AnimalsAll">
 		<entity name="animalRabbit"/>
 		<entity name="animalChicken"/>
 		<entity name="animalStag"/>
@@ -879,7 +863,7 @@
 		<entity name="animalDireWolf" prob="0.15"/>
 		<entity name="animalBear" prob="0.15"/>
 	</entitygroup>
-	<entitygroup name="EnemyAnimalsWasteland" >
+	<entitygroup name="EnemyAnimalsWasteland">
 		<entity name="invisibleAnimalEnemy" prob="6"/>
 		<entity name="animalSnake"/>
 		<entity name="animalZombieVulture"/>
@@ -971,13 +955,6 @@
 		<entity name="animalZombieDog" prob="0.01"/>
 		<entity name="zombieSteveCrawler" prob="0.01"/>
 		<entity name="zombieWightFeral" prob="0.01"/>
-		<entity name="zombieMaleHazmat6"/>
-		<entity name="zombieSoldier5"/>
-		<entity name="zombieSoldier6"/>
-		<entity name="zombieMaleHazmat3"/>
-		<entity name="zombieMaleHazmat1"/>
-		<entity name="zombieMaleHazmat4"/>
-		<entity name="zombieSoldier4"/>
 	</entitygroup>
 	<entitygroup name="ZombieFootballStadiumGroup">
 		<entity name="zombieFootballPlayer5" prob="10"/>
@@ -988,11 +965,6 @@
 		<entity name="zombieYo" prob="0.01"/>
 		<entity name="zombieNurse" prob="0.01"/>
 		<entity name="zombieFatHawaiian" prob="0.01"/>
-		<entity name="zombieCheerleader1" prob="10"/>
-		<entity name="zombieCheerleader2" prob="10"/>
-		<entity name="zombieCheerleader5" prob="10"/>
-		<entity name="zombieCheerleader6" prob="10"/>
-		<entity name="zombieCheerleader4" prob="10"/>
 		<entity name="zombieFootballPlayer4" prob="10"/>
 	</entitygroup>
 	<entitygroup name="ZombieUtilityWorkerGroup">
@@ -1029,8 +1001,8 @@
 		<entity name="zombieStripper" prob="4"/>
 		<entity name="zombieUtilityWorker"/>
 		<entity name="zombieFarmer"/>
-		<entity name="zombieBiker3"   />
-		<entity name="zombieBiker5"   />
+		<entity name="zombieBiker3"/>
+		<entity name="zombieBiker5"/>
 		<entity name="zombieSkateboarder"/>
 		<entity name="zombieBoe"/>
 		<entity name="zombieMoe"/>
@@ -1048,7 +1020,6 @@
 	<entitygroup name="ZombieBearsGroup">
 		<entity name="animalZombieBear"/>
 	</entitygroup>
-
 	<entitygroup name="SupplyCrates_General">
 		<entity name="sc_General"/>
 	</entitygroup>

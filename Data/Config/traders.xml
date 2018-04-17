@@ -1,4 +1,4 @@
-<traders buy_markup="3.0" sell_markdown="0.2" quality_mod="1,2" currency_item="casinoCoin" >
+<traders buy_markup="3.0" sell_markdown="0.2" quality_mod="1,2" currency_item="casinoCoin">
 	<!-- When adding items or blocks to the list, check if they have an "EconomicValue". Most world-decoration blocks like "cntSuitcase" or "airConditioner" do not have values set. quality_mod: adjusts the price range of all items with a quality level. 	Price of QL 1 item =  item.EconomicValue * traders.quality_mod(low) 	Price of QL 600 item =  item.EconomicValue * traders.quality_mod(high) -->
 	<!-- <trader_economy_limits><item name="hazmatBoots" min="2" max="10"/><item name="hazmatPants" min="2" max="10"/><item name="arrow" min="1" max="100"/><item name="steelArrow" min="1" max="100"/></trader_economy_limits>-->
 	<trader_item_groups>
@@ -227,10 +227,10 @@
 			<item name="parts44Magnum_frame" prob="0.3"/>
 			<item name="parts44Magnum_grip" prob="0.3"/>
 			<item name="parts44Magnum_parts" prob="0.3"/>
-		<item name="gunBoltRifle_Parts"/>
-		<item name="gunBoltRifle_Barrel"/>
-		<item name="gunBoltRifle_Receiver"/>
-		<item name="gunBoltRifle_Stock"/>
+			<item name="gunBoltRifle_Parts"/>
+			<item name="gunBoltRifle_Barrel"/>
+			<item name="gunBoltRifle_Receiver"/>
+			<item name="gunBoltRifle_Stock"/>
 		</trader_item_group>
 		<trader_item_group name="weaponsMilitaryParts">
 			<item name="partsMP5_barrel"/>
@@ -256,22 +256,22 @@
 			<item name="gunrifleSilencer" prob="0.3"/>
 			<item name="gunhandgunSilencer" prob="0.3"/>
 			<item name="ExtendedRifleMagazine" prob="0.3"/>
-		<item name="partsDoubleBarrel_barrel"/>
-		<item name="partsDoubleBarrel_stock"/>
-		<item name="partsDoubleBarrel_parts"/>
-		<item name="partsDoubleBarrel_receiver"/>
-		<item name="DesertEagle_Barrel"/>
-		<item name="DesertEagle_Parts"/>
-		<item name="DesertEagle_Receiver"/>
-		<item name="DesertEagle_Grip"/>
-	<item name="M25SniperRifle_Stock"/>
-	<item name="M25SniperRifle_Receiver"/>
-	<item name="M25SniperRifle_Barrel"/>
-	<item name="M25SniperRifle_Parts"/>
-	<item name="FAMAS_Parts"/>
-	<item name="FAMAS_Barrel"/>
-	<item name="FAMAS_Stock"/>
-	<item name="FAMAS_Receiver"/>
+			<item name="partsDoubleBarrel_barrel"/>
+			<item name="partsDoubleBarrel_stock"/>
+			<item name="partsDoubleBarrel_parts"/>
+			<item name="partsDoubleBarrel_receiver"/>
+			<item name="DesertEagle_Barrel"/>
+			<item name="DesertEagle_Parts"/>
+			<item name="DesertEagle_Receiver"/>
+			<item name="DesertEagle_Grip"/>
+			<item name="M25SniperRifle_Stock"/>
+			<item name="M25SniperRifle_Receiver"/>
+			<item name="M25SniperRifle_Barrel"/>
+			<item name="M25SniperRifle_Parts"/>
+			<item name="FAMAS_Parts"/>
+			<item name="FAMAS_Barrel"/>
+			<item name="FAMAS_Stock"/>
+			<item name="FAMAS_Receiver"/>
 		</trader_item_group>
 		<trader_item_group name="weaponsCompoundBowParts">
 			<item name="partsCompoundBow_body"/>
@@ -295,7 +295,6 @@
 			<item name="batWood" prob="0.5"/>
 			<item name="metalPipe" prob="0.2"/>
 			<item name="trackerKnife" prob="0.5"/>
-
 		</trader_item_group>
 		<trader_item_group name="weaponsCrossbow+ammo" count="all">
 			<item name="crossbow" count="1"/>
@@ -370,32 +369,29 @@
 			<item name="pumpShotgunSchematic"/>
 		</trader_item_group>
 		<trader_item_group name="rareBooks" count="1">
-		<item name="ak47Schematic"/>
-		<item name="augerSchematic"/>
-		<item name="chainsawSchematic"/>
-		<item name="minibikesForDumbshits"/>
-		<item name="MinibikesForSmartshits" prob="0.11"/>
-		<item name="MinibikesForToughshits" prob="0.11"/>
-		<item name="rocketLauncherSchematic"/>
-		<item name="shotgunSlugSchematic"/>
-		<item name="sledgehammerSchematic"/>
-		<item name="smgSchematics"/>
-		<item name="sniperRifleSchematic"/>
-		<item name="DesertEagleSchematic"/>
-		<item name="nailgunSchematic"/>
-		<item name="Scavenging"/>
-		<item name="FAMASSchematics"/>
-		<item name="gunBoltRifleSchematics"/>
-		<item name="ECOChainsawSchematic"/>
-		<item name="HDChainsawSchematic"/>
-		<item name="HDAugerSchematic"/>
-		<item name="ECOAugerSchematic"/>
-
-		<item name="Bladed_Weapons"/>
-
-		<item name="trueMiningTNTSchematic"/>
-		<item name="Construction_Tools"/>
-		<item name="Mining_Tools"/>
+			<item name="ak47Schematic"/>
+			<item name="augerSchematic"/>
+			<item name="chainsawSchematic"/>
+			<item name="minibikesForDumbshits"/>
+			<item name="MinibikesForSmartshits" prob="0.11"/>
+			<item name="MinibikesForToughshits" prob="0.11"/>
+			<item name="rocketLauncherSchematic"/>
+			<item name="shotgunSlugSchematic"/>
+			<item name="sledgehammerSchematic"/>
+			<item name="smgSchematics"/>
+			<item name="sniperRifleSchematic"/>
+			<item name="nailgunSchematic"/>
+			<item name="Scavenging"/>
+			<item name="FAMASSchematics"/>
+			<item name="gunBoltRifleSchematics"/>
+			<item name="ECOChainsawSchematic"/>
+			<item name="HDChainsawSchematic"/>
+			<item name="HDAugerSchematic"/>
+			<item name="ECOAugerSchematic"/>
+			<item name="Bladed_Weapons"/>
+			<item name="trueMiningTNTSchematic"/>
+			<item name="Construction_Tools"/>
+			<item name="Mining_Tools"/>
 			<item name="cookingVol1" prob="0.5"/>
 			<item name="cookingVol2" prob="0.5"/>
 			<item name="cookingVol3" prob="0.5"/>
@@ -700,8 +696,7 @@
 			<item name="largeStove01" prob="0.12"/>
 			<item name="largeStove02" prob="0.12"/>
 			<item name="largeStove03" prob="0.12"/>
-			<item name="grill"/>
-
+			<item name="bbqgrill"/>
 		</trader_item_group>
 		<trader_item_group name="decorativeCurtains" count="all">
 			<item name="curtain_top1Sheet3" count="4,15"/>
@@ -869,7 +864,7 @@
 			<item name="solderGun" count="1" prob="0.4"/>
 			<item name="sewingKit" count="1" prob="0.4"/>
 			<item name="blacksmithHammer" count="1" prob="0.4"/>
-			<item name="beaker" count="1" prob="0.4"/>		
+			<item name="beaker" count="1" prob="0.4"/>
 			<item name="toolHeadSteelAxe" count="1"/>
 			<item name="toolHeadSteelPickaxe" count="1"/>
 			<item name="toolHeadSteelShovel" count="1"/>

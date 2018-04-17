@@ -1,10 +1,9 @@
-<!-- 	Quest format description: 	Example: <quest id="quest_BasicSurvival1" name_key="Basic Survival 1/8" subtitle_key="Craft a Stone Axe" description_key="blah" icon="ui_game_symbol_hammer" >id = ID used for the quest 	name_key - localization key for the quest used when displayed in the quest list. 	subtitle_key = localization key for the sub name used when displayed in the quest details and tracker. 	description_key = localization key for the description displayed in the description window. 	offer_key = localization key for the offer window description. 	icon = icon shown in the quest list and on the tracker. 	category_key = localization key for the category type (quest,challenge) 	difficulty = (veryeasy, easy, medium, hard, insane ) 	Alternative settings for custom quest creation: 	name - quest name without localization. 	subtitle - sub name without localization. 	description - description without localization. 	offer - offer without localization. 	group_name - quest chain name without localization. 	category - category type without localization. -->
+<!-- 	Quest format description: 	Example: <quest id="quest_BasicSurvival1" name_key="Basic Survival 1/8" subtitle_key="Craft a Stone Axe" description_key="blah" icon="ui_game_symbol_hammer">id = ID used for the quest 	name_key - localization key for the quest used when displayed in the quest list. 	subtitle_key = localization key for the sub name used when displayed in the quest details and tracker. 	description_key = localization key for the description displayed in the description window. 	offer_key = localization key for the offer window description. 	icon = icon shown in the quest list and on the tracker. 	category_key = localization key for the category type (quest,challenge) 	difficulty = (veryeasy, easy, medium, hard, insane ) 	Alternative settings for custom quest creation: 	name - quest name without localization. 	subtitle - sub name without localization. 	description - description without localization. 	offer - offer without localization. 	group_name - quest chain name without localization. 	category - category type without localization. -->
 <quests>
 	<!-- Basic Survival 1 - Craft a Bedroll /> -->
 	<quest id="quest_BasicSurvival1" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival1" subtitle_key="quest_BasicSurvival1_subtitle" description_key="quest_BasicSurvival1_description" icon="ui_game_symbol_map_bed" category_key="quest" difficulty="veryeasy" offer_key="quest_BasicSurvival_offer">
 		<action type="ShowTip" value="tutorialTipQuest02"/>
 		<reward type="Item" id="qt_zombie" value="1"/>
-		<reward type="Quest" id="quest_BasicSurvival2"/>
 		<action type="TrackQuest"/>
 		<objective type="FetchKeep" id="cottonPlant" value="10"/>
 		<objective type="Craft" id="cloth" value="5"/>
@@ -13,7 +12,7 @@
 		<reward type="Quest" id="quest_BasicSurvival2"/>
 	</quest>
 	<!-- Basic Survival 2 - Craft a Stone Axe /> -->
-	<quest id="quest_BasicSurvival2" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival2" subtitle="Craft a Stone Axe" subtitle_key="quest_BasicSurvival2_subtitle" description_key="quest_BasicSurvival2_description" 	icon="ui_game_symbol_hammer" category_key="quest" offer_key="quest_BasicSurvival_offer" >
+	<quest id="quest_BasicSurvival2" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival2" subtitle="Craft a Stone Axe" subtitle_key="quest_BasicSurvival2_subtitle" description_key="quest_BasicSurvival2_description" 	icon="ui_game_symbol_hammer" category_key="quest" offer_key="quest_BasicSurvival_offer">
 		<objective type="FetchKeep" id="yuccaFibers" value="2"/>
 		<objective type="FetchKeep" id="wood" value="2"/>
 		<objective type="FetchKeep" id="rockSmall" value="4"/>
@@ -50,10 +49,12 @@
 	<quest id="quest_BasicSurvival6" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival6" subtitle_key="quest_BasicSurvival6_subtitle" description_key="quest_BasicSurvival6_description" icon="ui_game_symbol_archery" category_key="quest" difficulty="veryeasy">
 		<objective type="FetchKeep" id="wood" value="10"/>
 		<objective type="FetchKeep" id="yuccaFibers" value="3"/>
-		<objective type="FetchKeep" id="feather" value="2"/>
-		<objective type="FetchKeep" id="rockSmall" value="2"/>
+		<objective type="FetchKeep" id="feather" value="6"/>
+		<objective type="FetchKeep" id="rockSmall" value="6"/>
 		<objective type="Craft" id="woodenBow" value="1"/>
-		<objective type="Craft" id="arrow" value="2"/>
+		<objective type="Craft" id="stick" value="6"/>
+		<objective type="Craft" id="stoneArrowHead" value="6"/>
+		<objective type="Craft" id="arrow" value="6"/>
 		<reward type="Quest" id="quest_BasicSurvival7"/>
 	</quest>
 	<!-- Basic Survival 7 - Start a Base /> -->
@@ -63,7 +64,6 @@
 		<objective type="BlockPlace" id="woodFrameBlock" value="3"/>
 		<objective type="BlockUpgrade" id="woodFrameBlock" value="3"/>
 		<reward type="Quest" id="quest_BasicSurvival8"/>
-
 	</quest>
 	<!-- Basic Survival 8 - Build a Campfire /> -->
 	<quest id="quest_BasicSurvival8" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival8" subtitle_key="quest_BasicSurvival8_subtitle" description_key="quest_BasicSurvival8_description" icon="ui_game_symbol_campfire" category_key="quest" difficulty="veryeasy">
@@ -118,7 +118,7 @@
 		<reward type="SkillPoints" value="5"/>
 	</quest>
 	<!-- CHALLENGES -->
-	<quest id="challenge_silenceofthelambs" name_key="challenge_silenceofthelambs" subtitle_key="challenge_silenceofthelambs_subtitle" description_key="challenge_silenceofthelambs_offer" icon="ui_game_symbol_zombie" 	repeatable="true" category_key="challenge" offer_key="challenge_silenceofthelambs_offer" difficulty="insane" >
+	<quest id="challenge_silenceofthelambs" name_key="challenge_silenceofthelambs" subtitle_key="challenge_silenceofthelambs_subtitle" description_key="challenge_silenceofthelambs_offer" icon="ui_game_symbol_zombie" 	repeatable="true" category_key="challenge" offer_key="challenge_silenceofthelambs_offer" difficulty="insane">
 		<objective type="Time" value="1200" optional="true"/>
 		<objective type="ZombieKill" id="zombieScreamer,zombieScreamerFeral" value="3"/>
 		<reward type="SkillPoints" value="2"/>
@@ -137,7 +137,7 @@
 		<reward type="Exp" value="800"/>
 		<reward type="SkillPoints" value="5" optional="true"/>
 	</quest>
-	<quest id="challenge_nurseyoubacktohealth" name_key="challenge_nurseyoubacktohealth" subtitle_key="challenge_nurseyoubacktohealth_subtitle" description_key="challenge_nurseyoubacktohealth_offer" icon="ui_game_symbol_zombie"	repeatable="true" category_key="challenge" offer_key="challenge_nurseyoubacktohealth_offer" difficulty="medium" >
+	<quest id="challenge_nurseyoubacktohealth" name_key="challenge_nurseyoubacktohealth" subtitle_key="challenge_nurseyoubacktohealth_subtitle" description_key="challenge_nurseyoubacktohealth_offer" icon="ui_game_symbol_zombie"	repeatable="true" category_key="challenge" offer_key="challenge_nurseyoubacktohealth_offer" difficulty="medium">
 		<objective type="Time" value="900" optional="true"/>
 		<objective type="ZombieKill" id="zombieNurse,zombieNurseFeral" value="3"/>
 		<reward type="SkillPoints" value="2"/>
@@ -246,7 +246,6 @@
 		<reward type="SkillPoints" value="3"/>
 		<reward type="Exp" value="1000"/>
 	</quest>
-	
 	<!--Treasures-->
 	<quest id="treasure_taylor" name_key="treasure_taylor" subtitle_key="treasure_taylor_subtitle" description_key="treasure_taylor_offer" icon="ui_game_symbol_treasure" 	repeatable="true" category_key="treasure" offer_key="treasure_taylor_offer" difficulty="medium">
 		<objective type="TreasureChest" id="treasureChest" value="500-1750"/>
@@ -332,7 +331,6 @@
 		<reward type="SkillPoints" value="10"/>
 		<reward type="Exp" value="1500"/>
 	</quest>
-	
 	<!--Blunt Weapons-->
 	<quest id="quest_WeaponBlunt01" group_name_key="Breaking Some Skulls" name_key="Breaking Some Skulls 1/8" subtitle_key="Kill 15 zombies" description_key="Kill 15 zombies with a Wooden Club." icon="ui_game_symbol_zombie"  	repeatable="true" category_key="Quest" difficulty="medium">
 		<objective type="ZombieKill" value="15"/>
@@ -389,7 +387,6 @@
 		<reward type="Exp" value="1500"/>
 		<reward type="SkillPoints" value="10"/>
 	</quest>
-
 	<!--Bow Weapons-->
 	<quest id="quest_WeaponBows01" group_name_key="Daryl Would Be Proud" name_key="Daryl Would Be Proud 1/7" subtitle_key="Kill 25 zombies" description_key="Kill 25 zombies with a wooden bow." icon="ui_game_symbol_zombie"  	repeatable="true" category_key="Quest" difficulty="medium">
 		<objective type="ZombieKill" value="25"/>
@@ -437,8 +434,7 @@
 		<requirement type="Holding" id="crossbowRepeater"/>
 		<reward type="SkillPoints" value="10"/>
 		<reward type="Exp" value="1500"/>
-	</quest>	
-
+	</quest>
 	<!--Handguns-->
 	<quest id="quest_HandgunExpert00" group_name_key="Handgun Expert" name_key="Handgun Expert 0/8" subtitle_key="Kill 25 zombies" description_key="Kill 25 zombies with a homemade pistol." icon="ui_game_symbol_zombie"  	repeatable="true" category_key="Quest" difficulty="medium">
 		<objective type="ZombieKill" value="25"/>
@@ -498,7 +494,6 @@
 		<reward type="SkillPoints" value="10"/>
 		<reward type="Exp" value="1500"/>
 	</quest>
-	
 	<!--Rifles-->
 	<quest id="quest_RiflesExpert01" group_name_key="Rifles Expert" name_key="Rifles Expert 1/8" subtitle_key="Assemble an SMG" description_key="To assemble a Weapon or upgrade it with better parts you must have all the parts in your inventory and have unlocked the recipe. Build it by selecting the part in your inventory and clicking on the “Assemble” action. These recipes will not appear in Crafting menus." icon="ui_game_symbol_assemble" category_key="Quest">
 		<objective type="Assemble" id="gunMP5" value="1"/>
@@ -551,7 +546,6 @@
 		<reward type="SkillPoints" value="10"/>
 		<reward type="Exp" value="1500"/>
 	</quest>
-
 	<!--Shotguns-->
 	<quest id="quest_ShotgunExpert00" group_name_key="Shotgun Expert" name_key="Shotgun Expert 0/8" subtitle_key="Kill 25 zombies" description_key="Kill 25 zombies with a Homemade Shotgun." icon="ui_game_symbol_zombie"  	repeatable="true" category_key="Quest" difficulty="medium">
 		<objective type="ZombieKill" value="25"/>
@@ -610,9 +604,8 @@
 		<requirement type="Holding" id="DoubleBarrel"/>
 		<reward type="SkillPoints" value="10"/>
 		<reward type="Exp" value="1500"/>
-	</quest>	
-	
-	<!--Explosives-->	
+	</quest>
+	<!--Explosives-->
 	<quest id="quest_ExplosivesExpert01" group_name_key="Explosives Expert" name_key="Explosives Expert 1/2" subtitle_key="Assemble a Rocket Launcher" description_key="To assemble a Weapon or upgrade it with better parts you must have all the parts in your inventory and have unlocked the recipe. Build it by selecting the part in your inventory and clicking on the “Assemble” action. These recipes will not appear in Crafting menus." icon="ui_game_symbol_assemble" category_key="Quest">
 		<objective type="Assemble" id="gunRocketLauncher" value="1"/>
 		<reward type="SkillPoints" value="3"/>
@@ -625,7 +618,6 @@
 		<reward type="SkillPoints" value="5"/>
 		<reward type="Exp" value="1000"/>
 	</quest>
-	
 	<!--Armor Crafting-->
 	<quest id="quest_Armored01" group_name_key="Armor Crafting" name_key="Hide Armor 1/2" subtitle_key="Craft Hide Armor" description_key="To craft this you must be in the Tailor Station." icon="ui_game_symbol_armor_leather" category_key="Quest">
 		<objective type="FetchKeep" id="animalHide" value="60"/>
@@ -679,7 +671,6 @@
 		<objective type="FetchKeep" id="scrapIron" value="600"/>
 		<objective type="FetchKeep" id="leather" value="16"/>
 		<objective type="FetchKeep" id="ductTape" value="9"/>
-
 		<objective type="Craft" id="scrapLegArmor" value="1"/>
 		<objective type="Craft" id="scrapChestArmor" value="1"/>
 		<objective type="Craft" id="scrapHelmet" value="1"/>
@@ -698,12 +689,10 @@
 		<reward type="Item" id="scrapIron" value="300"/>
 		<reward type="Item" id="leather" value="10"/>
 		<reward type="Item" id="ductTape" value="10"/>
-
 		<reward type="SkillPoints" value="3"/>
 		<reward type="Exp" value="1000"/>
 		<reward type="Quest" id="quest_Armored07"/>
 	</quest>
-
 	<quest id="quest_Armored07" group_name_key="Armor Crafting" name_key="Iron Armor 1/2" subtitle_key="Craft Iron Armor" description_key="To craft this you must be in the Tailor Station." icon="armor_iron" category_key="Quest">
 		<objective type="FetchKeep" id="forgedIron" value="76"/>
 		<objective type="FetchKeep" id="leather" value="19"/>
@@ -727,7 +716,6 @@
 		<reward type="SkillPoints" value="3"/>
 		<reward type="Exp" value="1000"/>
 		<reward type="Quest" id="quest_Armored09"/>
-
 	</quest>
 	<quest id="quest_Armored09" group_name_key="Armor Crafting" name_key="Steel Armor 1/2" subtitle_key="Craft Military Armor" description_key="To craft this you must be in the Tailor Station" icon="ui_game_symbol_armor_leather" category_key="Quest">
 		<objective type="FetchKeep" id="forgedSteel" value="120"/>
@@ -776,7 +764,6 @@
 		<reward type="SkillPoints" value="3"/>
 		<reward type="Exp" value="1000"/>
 	</quest>
-
 	<!--Zombie Kills-->
 	<quest id="quest_ZombieSlayer01" name_key="Breaking News!" subtitle_key="Breaking News!" description_key="It has been established that persons who have recently died have been returning to life and committing acts of murder. A widespread investigation of funeral homes, morgues, and hospitals has concluded that the unburied dead have been returning to life and seeking human victims. It's hard for us here to be reporting this to you, but it does seem to be a fact.All persons who die during this crisis from whatever cause will come back to life to seek human victims, unless their bodies are first disposed of by cremation.!"   	 	offer_key="It has been established that persons who have recently died have been returning to life and committing acts of murder. A widespread investigation of funeral homes, morgues, and hospitals has concluded that the unburied dead have been returning to life and seeking human victims. It's hard for us here to be reporting this to you, but it does seem to be a fact.All persons who die during this crisis from whatever cause will come back to life to seek human victims, unless their bodies are first disposed of by cremation." category_key="Quest" difficulty="insane">
 		<reward type="Quest" id="quest_ZombieSlayer02"/>
@@ -801,108 +788,108 @@
 	<quest id="quest_ZombieSlayer05" group_name_key="Humanity's Last Hope" name_key="killin's as easy as breathing" subtitle_key="Kill 250 Zombies" description_key="There may be some hope left after all. Kill Them All!" icon="ui_game_symbol_zombie"  	repeatable="true" offer_key="quest_ZombieSlayer05_offer" category_key="Quest" difficulty="hard">
 		<objective type="ZombieKill" value="250"/>
 		<reward type="SkillPoints" value="10"/>
+		<reward type="Exp" value="1000"/>
 	</quest>
-
 	<!-- Ammo Dismantling -->
-	<quest id="9mmDismantle" name_key="Dismantle 9MM Bullets" subtitle_key="Dismantle 9MM Bullets" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer="You've dismantled some ammo for its raw materials." difficulty="easy">
+	<quest id="9mmDismantle" name_key="Dismantle 9MM Bullets" subtitle_key="Dismantle 9MM Bullets" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer_key="You've dismantled some ammo for its raw materials." difficulty="easy">
 		<reward type="Item" id="bulletCasing" value="10"/>
 		<reward type="Item" id="gunPowder" value="10"/>
 		<reward type="Item" id="bulletTip" value="10"/>
 	</quest>
-	<quest id="44MagDismantle" name_key="Dismantle 44Mag Bullets" subtitle_key="Dismantle 44Mag Bullets" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer="You've dismantled some ammo for its raw materials." difficulty="easy">
+	<quest id="44MagDismantle" name_key="Dismantle 44Mag Bullets" subtitle_key="Dismantle 44Mag Bullets" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer_key="You've dismantled some ammo for its raw materials." difficulty="easy">
 		<reward type="Item" id="bulletCasing" value="10"/>
 		<reward type="Item" id="gunPowder" value="20"/>
 		<reward type="Item" id="bulletTip" value="10"/>
 	</quest>
-	<quest id="762mmDismantle" name_key="Dismantle 762MM Bullets" subtitle_key="Dismantle 762MM Bullets" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer="You've dismantled some ammo for its raw materials." difficulty="easy">
+	<quest id="762mmDismantle" name_key="Dismantle 762MM Bullets" subtitle_key="Dismantle 762MM Bullets" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer_key="You've dismantled some ammo for its raw materials." difficulty="easy">
 		<reward type="Item" id="bulletCasing" value="10"/>
 		<reward type="Item" id="gunPowder" value="20"/>
 		<reward type="Item" id="bulletTip" value="10"/>
 	</quest>
-	<quest id="ShotgunShellDismantle" name_key="Dismantle Shotgun Shells" subtitle_key="Dismantle Shotgun Shells" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer="You've dismantled some ammo for its raw materials." difficulty="easy">
+	<quest id="ShotgunShellDismantle" name_key="Dismantle Shotgun Shells" subtitle_key="Dismantle Shotgun Shells" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer_key="You've dismantled some ammo for its raw materials." difficulty="easy">
 		<reward type="Item" id="paper" value="10"/>
 		<reward type="Item" id="gunPowder" value="20"/>
 		<reward type="Item" id="buckshot" value="10"/>
 	</quest>
-	<quest id="9mmDismantle30" name_key="Dismantle 9MM Bullets" subtitle_key="Dismantle 9MM Bullets" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting" repeatable="true" category_key="challenge" offer="You've dismantled some ammo for its raw materials." difficulty="easy">
+	<quest id="9mmDismantle30" name_key="Dismantle 9MM Bullets" subtitle_key="Dismantle 9MM Bullets" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting" repeatable="true" category_key="challenge" offer_key="You've dismantled some ammo for its raw materials." difficulty="easy">
 		<reward type="Item" id="bulletCasing" value="30"/>
 		<reward type="Item" id="gunPowder" value="30"/>
 		<reward type="Item" id="bulletTip" value="30"/>
 	</quest>
-	<quest id="44MagDismantle30" name_key="Dismantle 44Mag Bullets" subtitle_key="Dismantle 44Mag Bullets" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer="You've dismantled some ammo for its raw materials." difficulty="easy">
+	<quest id="44MagDismantle30" name_key="Dismantle 44Mag Bullets" subtitle_key="Dismantle 44Mag Bullets" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer_key="You've dismantled some ammo for its raw materials." difficulty="easy">
 		<reward type="Item" id="bulletCasing" value="30"/>
 		<reward type="Item" id="gunPowder" value="60"/>
 		<reward type="Item" id="bulletTip" value="30"/>
 	</quest>
-	<quest id="762mmDismantle30" name_key="Dismantle 762MM Bullets" subtitle_key="Dismantle 762MM Bullets" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer="You've dismantled some ammo for its raw materials." difficulty="easy">
+	<quest id="762mmDismantle30" name_key="Dismantle 762MM Bullets" subtitle_key="Dismantle 762MM Bullets" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer_key="You've dismantled some ammo for its raw materials." difficulty="easy">
 		<reward type="Item" id="bulletCasing" value="30"/>
 		<reward type="Item" id="gunPowder" value="60"/>
 		<reward type="Item" id="bulletTip" value="30"/>
 	</quest>
-	<quest id="ShotgunShellDismantle30" name_key="Dismantle Shotgun Shells" subtitle_key="Dismantle Shotgun Shells" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer="You've dismantled some ammo for its raw materials." difficulty="easy">
+	<quest id="ShotgunShellDismantle30" name_key="Dismantle Shotgun Shells" subtitle_key="Dismantle Shotgun Shells" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer_key="You've dismantled some ammo for its raw materials." difficulty="easy">
 		<reward type="Item" id="paper" value="30"/>
 		<reward type="Item" id="gunPowder" value="60"/>
 		<reward type="Item" id="buckshot" value="30"/>
 	</quest>
-	<quest id="32mmDismantle30" name_key="Dismantle 32MM Bullets" subtitle_key="Dismantle 32MM Bullets" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer="You've dismantled some ammo for its raw materials." difficulty="easy">
+	<quest id="32mmDismantle30" name_key="Dismantle 32MM Bullets" subtitle_key="Dismantle 32MM Bullets" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer_key="You've dismantled some ammo for its raw materials." difficulty="easy">
 		<reward type="Item" id="bulletCasing" value="30"/>
 		<reward type="Item" id="gunPowder" value="60"/>
 		<reward type="Item" id="bulletTip" value="30"/>
 	</quest>
-	<quest id="32mmDismantle" name_key="Dismantle 32MM Bullets" subtitle_key="Dismantle 32MM Bullets" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer="You've dismantled some ammo for its raw materials." difficulty="easy">
+	<quest id="32mmDismantle" name_key="Dismantle 32MM Bullets" subtitle_key="Dismantle 32MM Bullets" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer_key="You've dismantled some ammo for its raw materials." difficulty="easy">
 		<reward type="Item" id="bulletCasing" value="10"/>
 		<reward type="Item" id="gunPowder" value="20"/>
 		<reward type="Item" id="bulletTip" value="10"/>
 	</quest>
-	<quest id="556mmDismantle30" name_key="Dismantle 556MM Bullets" subtitle_key="Dismantle 556MM Bullets" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer="You've dismantled some ammo for its raw materials." difficulty="easy">
+	<quest id="556mmDismantle30" name_key="Dismantle 556MM Bullets" subtitle_key="Dismantle 556MM Bullets" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer_key="You've dismantled some ammo for its raw materials." difficulty="easy">
 		<reward type="Item" id="bulletCasing" value="30"/>
 		<reward type="Item" id="gunPowder" value="60"/>
 		<reward type="Item" id="bulletTip" value="30"/>
 	</quest>
-	<quest id="556mmDismantle" name_key="Dismantle 556MM Bullets" subtitle_key="Dismantle 556MM Bullets" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer="You've dismantled some ammo for its raw materials." difficulty="easy">
+	<quest id="556mmDismantle" name_key="Dismantle 556MM Bullets" subtitle_key="Dismantle 556MM Bullets" description_key="Dismantle your ammo to get their raw components." icon="misc_crafting"  repeatable="true" category_key="challenge" offer_key="You've dismantled some ammo for its raw materials." difficulty="easy">
 		<reward type="Item" id="bulletCasing" value="10"/>
 		<reward type="Item" id="gunPowder" value="20"/>
 		<reward type="Item" id="bulletTip" value="10"/>
 	</quest>
 	<!-- Ammo Box -->
-	<quest id="AmmoSupply9mm" name_key="Ammo Supply" subtitle_key="Ammo Supply" description_key="Open this to get some ammo for your gun." icon="misc_crafting"  repeatable="true" category_key="challenge" offer="Open this to get some ammo for your gun." difficulty="easy">
+	<quest id="AmmoSupply9mm" name_key="Ammo Supply" subtitle_key="Ammo Supply" description_key="Open this to get some ammo for your gun." icon="misc_crafting"  repeatable="true" category_key="challenge" offer_key="Open this to get some ammo for your gun." difficulty="easy">
 		<reward type="Item" id="9mmBullet" value="50"/>
 	</quest>
-	<quest id="AmmoSupply44Mag" name_key="Ammo Supply" subtitle_key="Ammo Supply" description_key="Open this to get some ammo for your gun." icon="misc_crafting"  repeatable="true" category_key="challenge" offer="Open this to get some ammo for your gun." difficulty="easy">
+	<quest id="AmmoSupply44Mag" name_key="Ammo Supply" subtitle_key="Ammo Supply" description_key="Open this to get some ammo for your gun." icon="misc_crafting"  repeatable="true" category_key="challenge" offer_key="Open this to get some ammo for your gun." difficulty="easy">
 		<reward type="Item" id="44MagBullet" value="30"/>
 	</quest>
-	<quest id="AmmoSupply762mm" name_key="Ammo Supply" subtitle_key="Ammo Supply" description_key="Open this to get some ammo for your gun." icon="misc_crafting"  repeatable="true" category_key="challenge" offer="Open this to get some ammo for your gun." difficulty="easy">
+	<quest id="AmmoSupply762mm" name_key="Ammo Supply" subtitle_key="Ammo Supply" description_key="Open this to get some ammo for your gun." icon="misc_crafting"  repeatable="true" category_key="challenge" offer_key="Open this to get some ammo for your gun." difficulty="easy">
 		<reward type="Item" id="762mmBullet" value="30"/>
 	</quest>
-	<quest id="AmmoSupplyShotgun" name_key="Ammo Supply" subtitle_key="Ammo Supply" description_key="Open this to get some ammo for your gun." icon="misc_crafting"  repeatable="true" category_key="challenge" offer="Open this to get some ammo for your gun." difficulty="easy">
+	<quest id="AmmoSupplyShotgun" name_key="Ammo Supply" subtitle_key="Ammo Supply" description_key="Open this to get some ammo for your gun." icon="misc_crafting"  repeatable="true" category_key="challenge" offer_key="Open this to get some ammo for your gun." difficulty="easy">
 		<reward type="Item" id="shotgunShell" value="50"/>
 	</quest>
-	<quest id="AmmoSupply32mm" name_key="Ammo Supply" subtitle_key="Ammo Supply" description_key="Open this to get some ammo for your gun." icon="misc_crafting"  repeatable="true" category_key="challenge" offer="Open this to get some ammo for your gun." difficulty="easy">
+	<quest id="AmmoSupply32mm" name_key="Ammo Supply" subtitle_key="Ammo Supply" description_key="Open this to get some ammo for your gun." icon="misc_crafting"  repeatable="true" category_key="challenge" offer_key="Open this to get some ammo for your gun." difficulty="easy">
 		<reward type="Item" id="32mmBullet" value="30"/>
 	</quest>
-	<quest id="AmmoSupply556mm" name_key="Ammo Supply" subtitle_key="Ammo Supply" description_key="Open this to get some ammo for your gun." icon="misc_crafting"  repeatable="true" category_key="challenge" offer="Open this to get some ammo for your gun." difficulty="easy">
+	<quest id="AmmoSupply556mm" name_key="Ammo Supply" subtitle_key="Ammo Supply" description_key="Open this to get some ammo for your gun." icon="misc_crafting"  repeatable="true" category_key="challenge" offer_key="Open this to get some ammo for your gun." difficulty="easy">
 		<reward type="Item" id="556mmBullet" value="50"/>
 	</quest>
 	<!-- New Quests -->
-	<quest id="challenge_weddingring" name_key="Holy Matrimony" subtitle_key="Collectes" description_key="Hey survivor. This chick I've been trying to get with in our group for months now refuses to put out unless we get 'married' - as if thats even a thing anymore. To make matters worse she won't accept unless she has some fancy ring. Nothing I've tried has been enough for her highness. Find me a diamond ring and I'll make make it worth your while - it'll certaily be worth mine!" icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer="Hey survivor. This chick I've been trying to get with in our group for months now refuses to put out unless we get 'married' - as if thats even a thing anymore. To make matters worse she won't accept unless she has some fancy ring. Nothing I've tried has been enough her her highness. Find me a diamond ring and I'll make make it worth your while - it'll certaily be worth mine!" difficulty="easy">
+	<quest id="challenge_weddingring" name_key="Holy Matrimony" subtitle_key="Collectes" description_key="Hey survivor. This chick I've been trying to get with in our group for months now refuses to put out unless we get 'married' - as if thats even a thing anymore. To make matters worse she won't accept unless she has some fancy ring. Nothing I've tried has been enough for her highness. Find me a diamond ring and I'll make make it worth your while - it'll certaily be worth mine!" icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer_key="Hey survivor. This chick I've been trying to get with in our group for months now refuses to put out unless we get 'married' - as if thats even a thing anymore. To make matters worse she won't accept unless she has some fancy ring. Nothing I've tried has been enough her her highness. Find me a diamond ring and I'll make make it worth your while - it'll certaily be worth mine!" difficulty="easy">
 		<objective type="Fetch" id="questItemRing" value="1"/>
 		<reward type="Item" id="casinoCoin" value="600"/>
 		<reward type="SkillPoints" value="3"/>
 		<reward type="Exp" value="1000"/>
 	</quest>
-	<quest id="challenge_weddingring2" name_key="Placeholder" subtitle_key="Placeholder" description_key="Placeholder" icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer="Placeholder" difficulty="easy">
+	<quest id="challenge_weddingring2" name_key="Placeholder" subtitle_key="Placeholder" description_key="Placeholder" icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer_key="Placeholder" difficulty="easy">
 		<objective type="Fetch" id="questItemRing2" value="1"/>
 		<reward type="Item" id="casinoCoin" value="200"/>
 		<reward type="SkillPoints" value="3"/>
 		<reward type="Exp" value="1000"/>
 	</quest>
-	<quest id="challenge_wallet" name_key="Fancy Wallet" subtitle_key="Fancy Wallet" description_key="Nothing shows ones worth like a luxurious wallet. Bring me something worthy of holding my cash and I will reward you." icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer="Nothing shows ones worth like a luxurious wallet. Bring me something worthy of holding my cash and I will reward you." difficulty="easy">
+	<quest id="challenge_wallet" name_key="Fancy Wallet" subtitle_key="Fancy Wallet" description_key="Nothing shows ones worth like a luxurious wallet. Bring me something worthy of holding my cash and I will reward you." icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer_key="Nothing shows ones worth like a luxurious wallet. Bring me something worthy of holding my cash and I will reward you." difficulty="easy">
 		<objective type="Fetch" id="questItemWallet" value="1"/>
 		<reward type="Item" id="casinoCoin" value="200"/>
 		<reward type="SkillPoints" value="3"/>
 		<reward type="Exp" value="1000"/>
 	</quest>
-	<quest id="challenge_books"   group_name_key="Avid Reader" name_key="Avid Reader 1/5" subtitle_key="Avid Reader" description_key="Greetings there fellow traveler. In todays hellish world it is a tragic shame and loss that many of the classic novels and stories that have lasted for generations have so quickly and easily been tossed aside - or worse, scrapped for mere paper! Please, should you find any of these timeless treasures send them my way. I will reward you handsomely for your troubles." icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer="Greetings there fellow traveler. In todays hellish world it is a tragic shame and loss that many of the classic novels and stories that have lasted for generations have so quickly and easily been tossed aside - or worse, scrapped for mere paper! Please, should you find any of these timeless treasures send them my way. I will reward you handsomely for your troubles." difficulty="easy">
+	<quest id="challenge_books"   group_name_key="Avid Reader" name_key="Avid Reader 1/5" subtitle_key="Avid Reader" description_key="Greetings there fellow traveler. In todays hellish world it is a tragic shame and loss that many of the classic novels and stories that have lasted for generations have so quickly and easily been tossed aside - or worse, scrapped for mere paper! Please, should you find any of these timeless treasures send them my way. I will reward you handsomely for your troubles." icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer_key="Greetings there fellow traveler. In todays hellish world it is a tragic shame and loss that many of the classic novels and stories that have lasted for generations have so quickly and easily been tossed aside - or worse, scrapped for mere paper! Please, should you find any of these timeless treasures send them my way. I will reward you handsomely for your troubles." difficulty="easy">
 		<objective type="Fetch" id="questItemBook" value="1"/>
 		<reward type="Item" id="casinoCoin" value="150"/>
 		<reward type="SkillPoints" value="3"/>
@@ -935,7 +922,7 @@
 		<reward type="Item" id="casinoCoin" value="200"/>
 		<reward type="SkillPoints" value="5"/>
 	</quest>
-	<quest id="challenge_childshappiness" group_name_key="A Child's Happiness" name_key="A Child's Happiness 1/3" subtitle_key="A Child's Happiness" description_key="Hello. A child came into our group recently who, understandably, is in poor shape since the loss of her parents. If you find anything out there that might help her take her mind off things we'd be greatly appreciate it. We do not have much but we will reward you as best we can." icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer="Hello. A child came into our group recently who, understandably, is in poor shape since the loss of her parents. If you find anything out there that might help her take her mind off things we'd be greatly appreciate it. We do not have much but we will reward you as best we can." difficulty="easy">
+	<quest id="challenge_childshappiness" group_name_key="A Child's Happiness" name_key="A Child's Happiness 1/3" subtitle_key="A Child's Happiness" description_key="Hello. A child came into our group recently who, understandably, is in poor shape since the loss of her parents. If you find anything out there that might help her take her mind off things we'd be greatly appreciate it. We do not have much but we will reward you as best we can." icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer_key="Hello. A child came into our group recently who, understandably, is in poor shape since the loss of her parents. If you find anything out there that might help her take her mind off things we'd be greatly appreciate it. We do not have much but we will reward you as best we can." difficulty="easy">
 		<objective type="Fetch" id="questItemTeddy" value="1"/>
 		<reward type="Item" id="casinoCoin" value="100"/>
 		<reward type="SkillPoints" value="3"/>
@@ -954,69 +941,69 @@
 		<reward type="Item" id="casinoCoin" value="250"/>
 		<reward type="SkillPoints" value="5"/>
 	</quest>
-	<quest id="challenge_toilet" name_key="A Clean Wipe" subtitle_key="A Clean Wipe" description_key="Hey traveler. While every trader I come across seems to have plenty of random bits and bobs - the one thing I really miss and want is toilet paper. I am sick of paper cuts and rashes! Please, if you find any out there send it my way." icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer="Hey traveler. While every trader I come across seems to have plenty of random bits and bobs - the one thing I really miss and want is toilet paper. I am sick of paper cuts and rashes! Please, if you find any out there send it my way." difficulty="easy">
+	<quest id="challenge_toilet" name_key="A Clean Wipe" subtitle_key="A Clean Wipe" description_key="Hey traveler. While every trader I come across seems to have plenty of random bits and bobs - the one thing I really miss and want is toilet paper. I am sick of paper cuts and rashes! Please, if you find any out there send it my way." icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer_key="Hey traveler. While every trader I come across seems to have plenty of random bits and bobs - the one thing I really miss and want is toilet paper. I am sick of paper cuts and rashes! Please, if you find any out there send it my way." difficulty="easy">
 		<objective type="Fetch" id="questItemToiletPaper" value="5"/>
 		<reward type="Item" id="casinoCoin" value="400"/>
 		<reward type="SkillPoints" value="3"/>
 		<reward type="Exp" value="1000"/>
 	</quest>
-	<quest id="challenge_walkman" name_key="Music Lover" subtitle_key="Music Lover" description_key="Hello traveler. I recently came across a stash of old cassette tapes but have no way to enjoy them. If you come across any old walkmans out there, send it my way. I'll pay you handsomely!" icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer="Hello traveler. I recently came across a stash of old cassette tapes but have no way to enjoy them. If you come across any old walkmans out there, send it my way. I'll pay you handsomely!" difficulty="easy">
+	<quest id="challenge_walkman" name_key="Music Lover" subtitle_key="Music Lover" description_key="Hello traveler. I recently came across a stash of old cassette tapes but have no way to enjoy them. If you come across any old walkmans out there, send it my way. I'll pay you handsomely!" icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer_key="Hello traveler. I recently came across a stash of old cassette tapes but have no way to enjoy them. If you come across any old walkmans out there, send it my way. I'll pay you handsomely!" difficulty="easy">
 		<objective type="Fetch" id="questItemWalkman" value="1"/>
 		<reward type="Item" id="casinoCoin" value="200"/>
 		<reward type="SkillPoints" value="3"/>
 		<reward type="Exp" value="1000"/>
 	</quest>
-	<quest id="challenge_condoms" name_key="Planned Parenthood" subtitle_key="Planned Parenthood" description_key="Certain members of our group have been getting more roudy than usual lately. We all cope in different ways, I suppose, but the last thing we need is more mouths to feed or a little screamer to draw the bitter's attention. If you find any rubbers out there send it our way and we'll make it worth your while. No used ones, either, smartass!" icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer="Certain members of our group have been getting more roudy than usual lately. We all cope in different ways, I suppose, but the last thing we need is more mouths to feed or a little screamer to draw the bitter's attention. If you find any rubbers out there send it our way and we'll make it worth your while. No used ones, either, smartass!" difficulty="easy">
+	<quest id="challenge_condoms" name_key="Planned Parenthood" subtitle_key="Planned Parenthood" description_key="Certain members of our group have been getting more roudy than usual lately. We all cope in different ways, I suppose, but the last thing we need is more mouths to feed or a little screamer to draw the bitter's attention. If you find any rubbers out there send it our way and we'll make it worth your while. No used ones, either, smartass!" icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer_key="Certain members of our group have been getting more roudy than usual lately. We all cope in different ways, I suppose, but the last thing we need is more mouths to feed or a little screamer to draw the bitter's attention. If you find any rubbers out there send it our way and we'll make it worth your while. No used ones, either, smartass!" difficulty="easy">
 		<objective type="Fetch" id="questItemCondoms" value="1"/>
 		<reward type="Item" id="casinoCoin" value="200"/>
 		<reward type="SkillPoints" value="3"/>
 		<reward type="Exp" value="1000"/>
 	</quest>
-	<quest id="challenge_baseball" name_key="American Pasttime" subtitle_key="American Pasttime" description_key="Hey there slugger! If you find any autographed baseballs out there send them my way and I'll make it worth your while. Someone has to keep the tradition alive - might as well be me!" icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer="Hey there slugger! If you find any autographed baseballs out there send them my way and I'll make it worth your while. Someone has to keep the tradition alive - might as well be me!" difficulty="easy">
+	<quest id="challenge_baseball" name_key="American Pasttime" subtitle_key="American Pasttime" description_key="Hey there slugger! If you find any autographed baseballs out there send them my way and I'll make it worth your while. Someone has to keep the tradition alive - might as well be me!" icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer_key="Hey there slugger! If you find any autographed baseballs out there send them my way and I'll make it worth your while. Someone has to keep the tradition alive - might as well be me!" difficulty="easy">
 		<objective type="Fetch" id="questItemBaseball" value="1"/>
 		<reward type="Item" id="casinoCoin" value="200"/>
 		<reward type="SkillPoints" value="3"/>
 		<reward type="Exp" value="1000"/>
 	</quest>
-	<quest id="challenge_cards" name_key="Texas Hold'Em" subtitle_key="Texas Hold'Em" description_key="Howdy survivor. I lost my last good pack of playing cards after a bunch of bitters overran our last camp. I miss them almost as much as our cook. If you come across any on your travels I'd be mighty grateful!" icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer="Howdy survivor. I lost my last good pack of playing cards after a bunch of bitters overran our last camp. I miss them almost as much as our cook. If you come across any on your travels I'd be mighty grateful! " difficulty="easy">
+	<quest id="challenge_cards" name_key="Texas Hold'Em" subtitle_key="Texas Hold'Em" description_key="Howdy survivor. I lost my last good pack of playing cards after a bunch of bitters overran our last camp. I miss them almost as much as our cook. If you come across any on your travels I'd be mighty grateful!" icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer_key="Howdy survivor. I lost my last good pack of playing cards after a bunch of bitters overran our last camp. I miss them almost as much as our cook. If you come across any on your travels I'd be mighty grateful! " difficulty="easy">
 		<objective type="Fetch" id="questItemCards" value="1"/>
 		<reward type="Item" id="casinoCoin" value="200"/>
 		<reward type="SkillPoints" value="3"/>
 		<reward type="Exp" value="1000"/>
 	</quest>
-	<quest id="challenge_cigarettes" name_key="Cancerous Addiction" subtitle_key="Cancerous Addiction" description_key="Listen bud, It won't be a biter that takes me down. If I'm going out, Im going out with my smokes. But its hard to do that when you can't find the bloody things. Please, if you come across a pack in your journey I'll pay you well for it." icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer="Listen bud, It won't be a bitter that takes me down. If I'm going out, Im going out with my smokes. But its hard to do that when you can't find the bloody things. Please, if you come across a pack in your journey I'll pay you well for it." difficulty="easy">
+	<quest id="challenge_cigarettes" name_key="Cancerous Addiction" subtitle_key="Cancerous Addiction" description_key="Listen bud, It won't be a biter that takes me down. If I'm going out, Im going out with my smokes. But its hard to do that when you can't find the bloody things. Please, if you come across a pack in your journey I'll pay you well for it." icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer_key="Listen bud, It won't be a bitter that takes me down. If I'm going out, Im going out with my smokes. But its hard to do that when you can't find the bloody things. Please, if you come across a pack in your journey I'll pay you well for it." difficulty="easy">
 		<objective type="Fetch" id="questItemCigarettes" value="1"/>
 		<reward type="Item" id="casinoCoin" value="200"/>
 		<reward type="SkillPoints" value="3"/>
 		<reward type="Exp" value="1000"/>
 	</quest>
-	<quest id="challenge_artsupplies" name_key="Artistic Integrity" subtitle_key="Artistic Integrity" description_key="People just don't understand! I must express myself, how else will I leave my mark on this world? I must capture the struggle of man in todays harsh world through paint! However these savages I'm stuck with don't seem to appreciate the necessity of what I'm trying to do! If you find any art supplies in your adventures I'll pay you well for it." icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer="People just don't understand! I must express myself, how else will I leave my mark on this world? I must capture the struggle of man in todays harsh world through paint! However these savages I'm stuck with don't seem to appreciate the necessity of what I'm trying to do! If you find any art supplies in your adventures I'll pay you well for it." difficulty="easy">
+	<quest id="challenge_artsupplies" name_key="Artistic Integrity" subtitle_key="Artistic Integrity" description_key="People just don't understand! I must express myself, how else will I leave my mark on this world? I must capture the struggle of man in todays harsh world through paint! However these savages I'm stuck with don't seem to appreciate the necessity of what I'm trying to do! If you find any art supplies in your adventures I'll pay you well for it." icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer_key="People just don't understand! I must express myself, how else will I leave my mark on this world? I must capture the struggle of man in todays harsh world through paint! However these savages I'm stuck with don't seem to appreciate the necessity of what I'm trying to do! If you find any art supplies in your adventures I'll pay you well for it." difficulty="easy">
 		<objective type="Fetch" id="questItemArtSupplies" value="1"/>
 		<reward type="Item" id="casinoCoin" value="200"/>
 		<reward type="SkillPoints" value="3"/>
 		<reward type="Exp" value="1000"/>
 	</quest>
-	<quest id="challenge_bong" name_key="Up In Smoke" subtitle_key="Up In Smoke" description_key="Hey man. Check it, this jack-off in our group smashed my only bong in a druken rage. If you find one out there in one of your wild journeys could you send it my way? I can sneak you some coins if you do, man." icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer="Hey man. Check it, this jack-off in our group smashed my only bong in a druken rage. If you find one out there in one of your wild journeys could you send it my way? I can sneak you some coins if you do, man." difficulty="easy">
+	<quest id="challenge_bong" name_key="Up In Smoke" subtitle_key="Up In Smoke" description_key="Hey man. Check it, this jack-off in our group smashed my only bong in a druken rage. If you find one out there in one of your wild journeys could you send it my way? I can sneak you some coins if you do, man." icon="ui_game_symbol_treasure"  	repeatable="true" category_key="challenge" offer_key="Hey man. Check it, this jack-off in our group smashed my only bong in a druken rage. If you find one out there in one of your wild journeys could you send it my way? I can sneak you some coins if you do, man." difficulty="easy">
 		<objective type="Fetch" id="questItemBong" value="1"/>
 		<reward type="Item" id="casinoCoin" value="200"/>
 		<reward type="Item" id="Joint" value="1"/>
 		<reward type="SkillPoints" value="3"/>
 		<reward type="Exp" value="1000"/>
 	</quest>
-	<quest id="challenge_walmart" group_name_key="quest_walmart" name_key="Walmart Shoppers" subtitle_key="Walmart Shoppers" description_key="Find and kill three fat male and female zombies." icon="ui_game_symbol_zombie" 	repeatable="true" category_key="challenge" offer="Kill 6 Fat Zombies." difficulty="medium">
+	<quest id="challenge_walmart" group_name_key="quest_walmart" name_key="Walmart Shoppers" subtitle_key="Walmart Shoppers" description_key="Find and kill three fat male and female zombies." icon="ui_game_symbol_zombie" 	repeatable="true" category_key="challenge" offer_key="Kill 6 Fat Zombies." difficulty="medium">
 		<action type="TrackQuest"/>
 		<objective type="ZombieKill" id="zombieMoe,zombieMoeFeral" value="3"/>
 		<objective type="ZombieKill" id="zombieFatHawaiian" value="3"/>
 		<reward type="SkillPoints" value="1"/>
 		<reward type="Exp" value="300"/>
 	</quest>
-	<quest id="challenge_junkhunt1" group_name_key="Junkhunt" name_key="Scavenging for orphans" subtitle_key="Scavenging for orphans" offer_key="A little orphan girl showed up at the tradingpost and won't stop crying about her lost dolly.  Find her a doll and you will be rewarded!" description_key="Find a doll and you will be rewarded!!" icon="ui_game_symbol_rubberDoll" category_key="challenge">
-		<objective type="FetchKeep" id="rubberDoll" value="1"/>
+	<quest id="challenge_junkhunt1" group_name_key="Hunt For Junk" name_key="Scavenging For Orphans 1/2" subtitle_key="Scavenging For Orphans" offer_key="A little orphan girl showed up at the tradingpost and won't stop crying about her lost teddy.  Find her a teddy bear and you will be rewarded!" description_key="Find a teddy bear and you will be rewarded!!" icon="ui_game_symbol_rubberDoll" category_key="challenge" difficulty="medium">
+		<objective type="FetchKeep" id="clothTeddyBear" value="1"/>
 		<reward type="Exp" value="400"/>
 		<reward type="SkillPoints" value="1"/>
 		<reward type="Quest" id="challenge_junkhunt2"/>
 	</quest>
-	<quest id="challenge_junkhunt2" group_name_key="Junkhunt" name_key="Scavenging for orphans again" subtitle_key="Scavenging for orphans again" offer_key="That girl's brother just showed up.  All he talks about is becoming a zombie killing soldier and is missing his toy soldier collection.  Collect some toy soldiers and you will be rewarded!  Are you up for this one too?" description_key="Collect some toy soldiers and you will be rewarded!" icon="ui_game_symbol_plasticSoldier" category_key="challenge">
+	<quest id="challenge_junkhunt2" group_name_key="Hunt For Junk" name_key="Scavenging For Orphans 2/2" subtitle_key="Scavenging For Orphans" offer_key="That girl's brother just showed up.  All he talks about is becoming a zombie killing soldier and is missing his toy soldier collection.  Collect some toy soldiers and you will be rewarded!  Are you up for this one too?" description_key="Collect some toy soldiers and you will be rewarded!" icon="ui_game_symbol_plasticSoldier" category_key="challenge" difficulty="medium">
 		<objective type="FetchKeep" id="plasticSoldier" value="1"/>
 		<objective type="FetchKeep" id="woodSoldier" value="1"/>
 		<objective type="FetchKeep" id="ironSoldier" value="1"/>
@@ -1025,52 +1012,40 @@
 		<reward type="Exp" value="800"/>
 		<reward type="SkillPoints" value="2"/>
 	</quest>
-	<quest id="challenge_feedthemole" name_key="Feeding the Clubhouse" subtitle_key="Feeding the Clubhouse 1/3" description_key="The Clubhouse is hungry. We need you to go out and hunt and kill 3 animals." icon="ui_game_symbol_fork" 	repeatable="true" category_key="challenge" offer="Jax and the boys are hungry and need a day's worth of food. Fetch him some and he might reward you Prospect." difficulty="easy">
+	<quest id="challenge_feedthemole" group_name_key="Feeding the Clubhouse" name_key="Feeding the Clubhouse 1/3" subtitle_key="Feeding the Clubhouse" description_key="The Clubhouse is hungry. We need you to go out and hunt and kill 3 animals." icon="ui_game_symbol_fork" 	repeatable="true" category_key="challenge" offer_key="Jax and the boys are hungry and need a day's worth of food. Fetch him some and he might reward you Prospect." difficulty="easy">
 		<action type="TrackQuest"/>
-		<objective type="AnimalKill" value="3" />
-			<requirement type="Holding" id="woodenBow" />
+		<objective type="AnimalKill" id="animalBoar" value="2"/>
+		<requirement type="Holding" id="woodenBow"/>
 		<reward type="Item" id="butcherKnife" value="200"/>
 		<reward type="Exp" value="400"/>
 		<reward type="SkillPoints" value="3"/>
 		<reward type="Quest" id="challenge_feedthemole1"/>
 	</quest>
-	<quest id="challenge_feedthemole1" name_key="Feeding the Clubhouse" subtitle_key="Feeding the Clubhouse 2/3" description_key="Gather some raw meat for the boys to cook up on the campfire." icon="ui_game_symbol_fork" 	repeatable="true" category_key="challenge" offer="Jax and the boys are hungry and need a day's worth of food. Fetch him some and he might reward you Prospect." difficulty="easy">
+	<quest id="challenge_feedthemole1" group_name_key="Feeding the Clubhouse"  name_key="Feeding the Clubhouse 2/3" subtitle_key="Feeding the Clubhouse" description_key="Gather some raw meat for the boys to cook up on the campfire." icon="ui_game_symbol_fork" 	repeatable="true" category_key="challenge" offer_key="Jax and the boys are hungry and need a day's worth of food. Fetch him some and he might reward you Prospect." difficulty="easy">
 		<action type="TrackQuest"/>
 		<objective type="FetchKeep" id="rawMeat" value="6"/>
-		<objective type="Craft" id="charredMeat" value="6" />
-
-		<reward type="Skill" id="Cooking" value="15"/>
 		<reward type="Item" id="cookingGrill" value="1"/>
 		<reward type="Exp" value="400"/>
 		<reward type="SkillPoints" value="3"/>
 		<reward type="Quest" id="challenge_feedthemole2"/>
 	</quest>
-	<quest id="challenge_feedthemole2" name_key="Feeding the Clubhouse" subtitle_key="Feeding the Clubhouse 3/3" description_key="The guys are thirsty. Fetch some cans and water and cook them up.." icon="ui_game_symbol_fork" 	repeatable="true" category_key="challenge" offer="Jax and the boys are hungry and need a day's worth of food. Fetch him some and he might reward you Prospect." difficulty="easy">
+	<quest id="challenge_feedthemole2"  group_name_key="Feeding the Clubhouse" name_key="Feeding the Clubhouse 3/3" subtitle_key="Feeding the Clubhouse" description_key="The guys are thirsty. Fetch some cans and water and cook them up.." icon="ui_game_symbol_fork" 	repeatable="true" category_key="challenge" offer_key="Jax and the boys are hungry and need a day's worth of food. Fetch him some and he might reward you Prospect." difficulty="easy">
 		<action type="TrackQuest"/>
 		<objective type="FetchKeep" id="canMurkyWater" value="2"/>
-		<objective type="Craft" id="canBoiledWater" value="2" />
-		<reward type="Item" id="cookingPot" value="200"/>
+		<reward type="Item" id="cookingPot" value="1"/>
 		<reward type="Item" id="MRE" value="2"/>
 		<reward type="Item" id="PurifiedWater" value="2"/>
 		<reward type="Exp" value="800"/>
 		<reward type="SkillPoints" value="5"/>
 	</quest>
-	
 	<!-- Notes and Skills -->
-	<quest id="survivorNotes" name_key="Survivor Experience" subtitle_key="Survivor Experience"  offer="This crumbled, bloodied note from a survivor might give you a little insight on surviving in this harsh world. Or at least teach you how not to end up like one who left the note..." description_key="Your experience surviving in this harsh world has given you a skill point." icon="misc_crafting"  repeatable="true" category_key="challenge" difficulty="easy">
-		<reward type="SkillPoints" value="1"/>
-		<reward type="Exp" value="300"/>
-	</quest>
-	<quest id="survivorNoteCollection" name_key="Survivor Experience" subtitle_key="Survivor Experience"  offer="This is a collection of survivor notes which might give you a little insight on surviving in this harsh world." description_key="Your experience surviving in this harsh world has given you 5 skill points." icon="misc_crafting"  repeatable="true" category_key="challenge" difficulty="easy">
-		<reward type="SkillPoints" value="5"/>
-	</quest>
+
+
 	<quest id="skill1" name_key="1 Skill Points" subtitle_key="1 Skill Points" description_key="Read for 1 Skill Point!" icon="misc_crafting"  repeatable="true" category_key="challenge" difficulty="easy">
 		<reward type="SkillPoints" value="1"/>
-		<reward type="Exp" value="300"/>
 	</quest>
 	<quest id="skill3" name_key="3 Skill Points" subtitle_key="3 Skill Points" description_key="Read for 3 Skill Points!" icon="misc_crafting"  repeatable="true" category_key="challenge" difficulty="easy">
 		<reward type="SkillPoints" value="3"/>
-		<reward type="Exp" value="1000"/>
 	</quest>
 	<quest id="skill5" name_key="5 Skill Points" subtitle_key="5 Skill Points" description_key="Read for 5 Skill Points!" icon="misc_crafting"  repeatable="true" category_key="challenge" difficulty="easy">
 		<reward type="SkillPoints" value="5"/>
@@ -1105,11 +1080,10 @@
 	<quest id="adminskill50" name_key="50 Skill Points" subtitle_key="50 Skill Points" description_key="50 Admin Skill Points for Testing" icon="misc_crafting"  repeatable="true" category_key="challenge" difficulty="easy">
 		<reward type="SkillPoints" value="50"/>
 	</quest>
-	
 	<!-- Classes -->
 	<quest id="riflesclass1" 	name_key="Rifles Class" 	group_name="SurvivalClasses" 	subtitle_key="Rifles Class" 	offer_key="Accepting this will give you a hunting rifle 150 bullets and a hunting rifle schematic" 	description_key="Become an expert in Rifles" 	icon="classMarksmanLevel1Icon" 	repeatable="false" 	category_key="Quest" 	difficulty="easy">
 		<reward type="Skill" id="RiflesClass" value="1"/>
-		<reward type="Skill" id="craftSkillAmmo" value="3"/>
+		<reward type="Skill" id="AmmoClass" value="1"/>
 		<reward type="Skill" id="Homemade Rifle Bullet" value="1"/>
 		<reward type="Skill" id="Rifle Exclusive" value="1"/>
 		<reward type="Skill" id="762mm Round Crafting" value="1"/>
@@ -1121,7 +1095,7 @@
 	</quest>
 	<quest id="handgunsclass1" 	name_key="Handguns Class" 	group_name="SurvivalClasses" 	subtitle_key="Handguns Class" 	offer_key="Accepting this will give you a pistol 200 bullets and a pistol schematic" 	description_key="Become an expert in Handguns" 	icon="classMarksmanLevel1Icon" 	repeatable="false" 	category_key="Quest" 	difficulty="easy">
 		<reward type="Skill" id="HandgunsClass" value="1"/>
-		<reward type="Skill" id="craftSkillAmmo" value="3"/>
+		<reward type="Skill" id="AmmoClass" value="1"/>
 		<reward type="Skill" id="Homemade Handgun Bullet" value="1"/>
 		<reward type="Skill" id="Handgun Exclusive" value="1"/>
 		<reward type="Skill" id="9mm Round Crafting" value="1"/>
@@ -1133,7 +1107,7 @@
 	</quest>
 	<quest id="shotgunsclass1" 	name_key="Shotguns Class" 	group_name="SurvivalClasses" 	subtitle_key="Shotguns Class" 	offer_key="Accepting this will give you a pump shotgun 150 bullets and a pump shotgun schematic" 	description_key="Become an expert in Shotguns" 	icon="classMarksmanLevel1Icon" 	repeatable="false" 	category_key="Quest" 	difficulty="easy">
 		<reward type="Skill" id="ShotgunsClass" value="1"/>
-		<reward type="Skill" id="craftSkillAmmo" value="3"/>
+		<reward type="Skill" id="AmmoClass" value="1"/>
 		<reward type="Skill" id="Homemade Shotgun Bullet" value="1"/>
 		<reward type="Skill" id="Shotgun Exclusive" value="1"/>
 		<reward type="Skill" id="shotgun Shell Crafting" value="1"/>
@@ -1146,7 +1120,7 @@
 	<quest id="survivalclass1" 	name_key="Survival Class" 	group_name="SurvivalClasses" 	subtitle_key="Survival Class" 	offer_key="Accepting this will give you a claw hammer skills in medicine, cooking and Traps and extra supplies" 	description_key="Become an expert in Survival" 	icon="classMarksmanLevel1Icon" 	repeatable="false" 	category_key="Quest" 	difficulty="easy">
 		<reward type="Skill" id="SurvivorClass" value="1"/>
 		<reward type="Skill" id="Survival Skills" value="1"/>
-		<reward type="Skill" id="Traps" value="15"/>
+		<reward type="Skill" id="Traps" value="1"/>
 		<reward type="Item" id="clawHammer" value="250"/>
 		<reward type="Item" id="skinningKnife2" value="250"/>
 		<reward type="Item" id="firstAidKit" value="1"/>
@@ -1159,7 +1133,6 @@
 		<reward type="Skill" id="BowsClass" value="1"/>
 		<reward type="Skill" id="Archery" value="15"/>
 		<reward type="Skill" id="Bow Exclusive" value="1"/>
-		<reward type="Skill" id="Arrow Crafting" value="2"/>
 		<reward type="Skill" id="Stone Crossbow Bolt" value="1"/>
 		<reward type="Item" id="crossbow" value="250"/>
 		<reward type="Item" id="stonecrossbowBolt" value="250"/>
@@ -1195,12 +1168,12 @@
 		<reward type="Item" id="painkillers" value="10"/>
 	</quest>
 	<quest id="farmingclass1" 	name_key="Farmer Class" 	group_name="SurvivalClasses" 	subtitle_key="Farmer Class" 	offer_key="Accepting this will give you some seeds and access to a Composter and fertilizer" 	description_key="Become an expert in Farming" 	icon="classMarksmanLevel1Icon" 	repeatable="false" 	category_key="Quest" 	difficulty="easy">
-		<reward type="Skill" id="FarmingClass" value="1"/>
+		<reward type="Skill" id="FarmerClass" value="1"/>
 		<reward type="Skill" id="Farming Skills" value="1"/>
+		<reward type="Skill" id="Green Thumb" value="1"/>
 		<reward type="Item" id="fertilizer" value="5"/>
 		<reward type="Item" id="mortarAndPestle" value="1"/>
 		<reward type="Item" id="seedPack" value="10"/>
 		<reward type="Item" id="hoeIron" value="250"/>
 	</quest>
-
 </quests>
